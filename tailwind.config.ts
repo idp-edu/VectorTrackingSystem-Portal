@@ -19,6 +19,9 @@ const config: Config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'formas_01': "url('/images/bg-site.svg')",
+      },
       maxWidth: {
         "8xl": "1408px",
       },
