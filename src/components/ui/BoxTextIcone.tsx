@@ -24,10 +24,10 @@ const BoxTextIcone = ({
   detalhe,
 }: BoxTextIconeProps) => {
   return (
-    <div className="my-auto flex flex-col md:w-2/3 ">
-      <div className={cn(BoxTextImageVariants({ align, detalhe }))}>
+    <div className="my-auto flex flex-col md:w-2/3 font-brandon">
+      <h2 className={cn(BoxTextImageVariants({ align, detalhe }))}>
         {children}
-      </div>
+      </h2>
       <Image
         src={src} //"/images/icon_1.svg"
         width={width}
@@ -47,11 +47,11 @@ export default BoxTextIcone;
 const BoxTextImageVariants = cva("", {
   variants: {
     align: {
-      right: "border-r-2 my-8 px-5 text-justify text-base font-[390] md:text-right md:text-lg lg:text-xl text-gray-800 md:pl-5 ",
+      right: "border-r-2 my-8 px-5 text-justify text-base font-brandon md:text-right md:text-lg lg:text-xl text-gray-800 md:pl-5 ",
       left:
-        "border-l-2 my-8 px-5 text-justify text-base font-[390] md:text-left md:text-lg lg:text-xl text-gray-800 md:pr-5",
+        "border-l-2 my-8 px-5 text-justify text-base  md:text-left md:text-lg lg:text-xl text-gray-800 md:pr-5",
       center:
-        "border-l-2 my-8 px-5 text-justify text-base font-[390] md:text-lg lg:text-xl text-gray-800 md:px-2",
+        "border-l-2 my-8 px-5 text-justify text-base  md:text-lg lg:text-xl text-gray-800 md:px-2",
     },
     detalhe: {
       brand_Azul: "border-blue-500",
@@ -59,7 +59,7 @@ const BoxTextImageVariants = cva("", {
     },
   },
   defaultVariants: {
-    align: "left",
+    align: "right",
     detalhe: "brand_Azul",
   },
 });

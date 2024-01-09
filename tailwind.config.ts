@@ -19,13 +19,29 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        brandon: ['var(--font-brandon)'],
+      },
       backgroundImage: {
         'formas_01': "url('/images/bg-site.svg')",
       },
       maxWidth: {
         "8xl": "1408px",
       },
+      dropShadow:{
+        '3xl': '0 35px 35px rgba(0, 0, 0, 0.25)',
+        '4xl': [
+            '0 35px 35px rgba(0, 0, 0, 0.25)',
+            '0 45px 65px rgba(0, 0, 0, 0.15)',
+          ],
+          'vts': '6px 8px 6px rgba(0, 0, 0, 0.25)',
+      },
       colors: {
+        vtsBrand: {
+          blue_light: "rgb(var(--blue-light)/ <alpha-value>)",
+          blue_medium: "rgb(var(--blue-medium)/ <alpha-value>)",
+          blue_heavy: "rgb(var(--blue-heavy)/ <alpha-value>)",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -78,6 +94,9 @@ const config: Config = {
       animation: {
         "accordion-up": "accordion-up 0.2s ease-out",
         "accordion-down": "accordion-down 0.2s ease-out",
+      },
+      tilted:{
+        hero: 'tiltedHero',
       }
     },
   },

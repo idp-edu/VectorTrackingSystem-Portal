@@ -1,12 +1,17 @@
-import React from 'react'
+import React from "react";
+import Image from "next/image";
 
 function Hero() {
-    return (
-        <div className='
-        h-96 w-auto 
-        bg-gradient-to-r from-cyan-500 to-blue-500' 
-        >Hero</div>
-    )
+  return (
+    <div className="tiltedHero">
+      <Image 
+        src="/images/Drone_01.png"
+        width={500}
+        height={500}
+        alt="Hero"
+      />
+    </div>
+  );
 }
 
-export default Hero
+export default Hero;

@@ -1,5 +1,4 @@
-import SectionHome2 from "@/components/SectionHome2";
-import BoxImage from "@/components/ui/BoxImage";
+import SectionHome from "@/components/SectionHome";
 
 export default function Home() {
   return (
@@ -10,7 +9,7 @@ export default function Home() {
         <p className="text-sm font-semibold text-gray-700">Saiba Mais</p>
         </div>
       </MaxWidthWrapper>  */}
-      <SectionHome2 />
+      <SectionHome />
     </main>
   );
 }

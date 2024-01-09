@@ -1,10 +1,18 @@
-import type { Metadata } from "next";
-import "./styles/globals.css";
 import Navbar from "@/components/Navbar";
-import cn  from "./lib/utils";
-import { Inter } from "next/font/google";
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import cn from "./lib/utils";
+import "./styles/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const brandon = localFont({
+  src: [
+    {
+      path: "../../public/fonts/brandon_med-webfont.woff2",
+      weight: "400",
+    },
+  ],
+  variable: "--font-brandon",
+});
 
 export const metadata: Metadata = {
   title: "Vector Tracking System",
@@ -17,18 +25,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="light">
+    <html lang="pt" className="light">
       <body
         className={cn(
-          "grainy min-h-screen font-sans antialiased",
-          inter.className,
+          "grainy min-h-screen antialiased",
+          `${brandon.className} font-normal`,
         )}
       >
-        
-        <Navbar />
+        <div className="pointer-events-none absolute left-0 top-0 z-0 flex h-full w-full px-5	">
+          <div className="relative h-full w-full border-x-2 border-dotted border-black/50" />
+          <div className="relative h-full w-full border-r-2 border-dotted border-black/50" />
+        </div>
+        {/* <Navbar /> */}
         {children}
-        
-
       </body>
     </html>
   );

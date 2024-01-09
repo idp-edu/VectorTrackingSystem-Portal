@@ -8,7 +8,7 @@ interface Props {
 
 const Logo = ({ title, className }: Props) => {
   return (
-    <Link href={"/"} className="flex">
+    <Link href={"/"} className="flex flex-row items-center gap-2">
       <Image
         src="/images/logo/Logo_Variação_7.svg"
         width={1}
@@ -16,8 +16,9 @@ const Logo = ({ title, className }: Props) => {
         alt="Foto de Caixas de coleta."
         className="w-[50px]"
       />
-      <h1 className={`text-1xl font-extrabold ${className}`}>
-        {title || "VectorTrackingSystem"}
+      <h1 className={` text-lg  font-brandon ${className}`}>
+        {/* {title || "VectorTrackingSystem"} */}
+        {title}
       </h1>
     </Link>
   );
