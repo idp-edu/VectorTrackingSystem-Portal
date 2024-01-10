@@ -6,13 +6,17 @@ import BoxTextIcone from "./ui/BoxTextIcone";
 import Card from "./ui/Card";
 import NewButton from "./ui/Button";
 import Hero from "./Hero";
+import Button from "./ui/Button";
+import Card_Email from "./Card_Email";
+import Carrousel from "./Carrousel";
+
 
 function SectionHome() {
   return (
     <div>
       {/*                           Pagina                           */}
       <Hero />
-      <div className=" z-1 mx-5 my-36 flex flex-col bg-transparent md:flex-row md:justify-end">
+      <div className=" z-1 mx-5 flex flex-col bg-transparent md:my-36 md:flex-row md:justify-end">
         <BoxImage
           src="/images/Foto_Caixa.png"
           width={442}
@@ -91,7 +95,7 @@ function SectionHome() {
 
       <div className="flex flex-row content-evenly justify-center p-10">
         <NewButton
-          onClick={() => alert("usa porra!")}
+          onClick={() => alert("Butão funcional :)")}
           intent={"primary"}
           className="h-12 w-36"
         >
@@ -119,16 +123,39 @@ function SectionHome() {
         </div>
       </section>
 
-      <section>
-        <div className="flex flex-row place-content-center items-center gap-4 p-5">
-          <div className="size-3 rounded-full bg-vtsBrand-blue_heavy"></div>
-          <h2 className="font-brandon text-lg">Ultimas Atualizações</h2>
-          <div className="size-3 rounded-full bg-vtsBrand-blue_heavy"></div>
-        </div>
+      <section className="flex flex-col items-center m-10	">
         <div>
+          <div className="flex flex-row place-content-center items-center gap-4 p-5">
+            <div className="size-3 rounded-full bg-vtsBrand-blue_heavy"></div>
+            <h2 className="font-brandon text-lg">Ultimas Atualizações</h2>
+            <div className="size-3 rounded-full bg-vtsBrand-blue_heavy"></div>
+          </div>
           <Card />
         </div>
+        <Button intent={"primary"} className="w-40">
+          Todas as publicações
+        </Button>
       </section>
+
+      <section className="w-92 h-96 bg-gray-200">
+        <p className="pl-16 pt-8 text-gray-500 text-md">Equipe / Participantes:</p>
+        <Carrousel />
+      </section>
+
+      <Card_Email />
+    
+
+      {/* zona de teste */}
+      {/* <div className="flex place-content-center">
+        <div className="markCard h-[500px] w-full content-center">
+          <Image
+            src="/images/heatmap1.webp"
+            width={800}
+            height={500}
+            alt="Hero"
+          />
+        </div>
+      </div> */}
     </div>
   );
 }

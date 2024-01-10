@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="pt" className="light">
       <body
         className={cn(
-          "grainy min-h-screen antialiased",
+          "grainy antialiased",
           `${brandon.className} font-normal`,
         )}
       >
@@ -36,7 +36,7 @@ export default function RootLayout({
           <div className="relative h-full w-full border-x-2 border-dotted border-black/50" />
           <div className="relative h-full w-full border-r-2 border-dotted border-black/50" />
         </div>
-        {/* <Navbar /> */}
+        <Navbar />  
         {children}
       </body>
     </html>

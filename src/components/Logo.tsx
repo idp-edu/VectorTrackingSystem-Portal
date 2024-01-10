@@ -10,7 +10,7 @@ const Logo = ({ title, className }: Props) => {
   return (
     <Link href={"/"} className="flex flex-row items-center gap-2">
       <Image
-        src="/images/logo/Logo_Variação_7.svg"
+        src="/images/logo/Logo_Variação_8.svg"
         width={1}
         height={1}
         alt="Foto de Caixas de coleta."

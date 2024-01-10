@@ -1,6 +1,6 @@
 //* Limita a página em um Width Max *
 
-import { cn } from "@/app/lib/utils"
+import cn  from "@/app/lib/utils"
 import { ReactNode } from "react"
 
 type MaxWidthWrapperType = {

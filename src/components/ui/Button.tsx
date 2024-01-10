@@ -17,12 +17,13 @@ const Button = ({ children, className, intent, ...props }: buttonProps) => {
   );
 };
 
-const ButtonVariants = cva("flex items-center justify-center px-4 py-2 rounded-lg font-medium focus:outline-none focus:ring-2 focus:ring-offset-white dark:focus:ring-offset-black focus:ring-offset-1 disabled:opacity-60 disabled:pointer-events-none hover:bg-opacity-80", {
+const ButtonVariants = cva("flex items-center justify-center px-4 py-2 rounded-lg font-medium focus:outline-none focus:ring-2 focus:ring-offset-white dark:focus:ring-offset-black focus:ring-offset-1 disabled:opacity-60 disabled:pointer-events-none hover:bg-opacity-80 ", {
   variants: {
     intent: {
       primary:
-        "bg-gradient-to-r from-vtsBrand-blue_medium to-vtsBrand-blue_light text-white",
+        "bg-gradient-to-r from-vtsBrand-blue_medium to-vtsBrand-blue_light text-white ",
       secondary: "border border-white text-blue-900 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-100 focus:bg-gradient-to-r",
+      solid: "bg-vtsBrand-blue_heavy text-white px-6 py-3 m-4",
       danger: "bg-red-500 text-white focus:ring-red-500"
     },
   },
